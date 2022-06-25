@@ -15,11 +15,8 @@ fi
 
 echo "Installing Volta..."
 curl https://get.volta.sh | bash
-
-# I can't seem to get Volta to work without this
 VOLTA_HOME="$HOME/.volta"
 PATH="$VOLTA_HOME/bin:$PATH"
-grep --silent "$VOLTA_HOME/bin" <<< $PATH || PATH="$VOLTA_HOME/bin:$PATH"
 
 echo "Installing latest Node.js"
 volta install node
